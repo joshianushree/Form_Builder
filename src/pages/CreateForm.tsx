@@ -127,6 +127,11 @@ const CreateForm = () => {
       return;
     }
 
+    if (fields.length === 0) {
+      alert("Please add at least one field to the form");
+      return;
+    }
+
     // Validate all derived fields to ensure correct parents & formulas
     for (const field of fields) {
       const { valid, error } = validateDerivedField(field, fieldsById);
