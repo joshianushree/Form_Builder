@@ -18,6 +18,7 @@ export const evaluateFormula = (
   if (!match) return "";
 
   const funcName = match[1].toLowerCase();
+  const argsStr = match[2]; // parameters inside parentheses
 
   switch (funcName) {
     case "calculateage": {
@@ -73,6 +74,41 @@ export const evaluateFormula = (
         }
       }
       return minVal !== null ? minVal.toString() : "";
+    }
+
+    case "concat": {
+      // Optional separator as last arg (comma separated)
+      const args = argsStr.split(",").map(s => s.trim());
+      let separator = "";
+      let concatParents = parents;
+
+      if (args.length > parents.length) {
+        separator = args[args.length - 1];
+        concatParents = args.slice(0, -1);
+      }
+
+      const values = concatParents
+        .map(pid => currentValues[pid] ?? "")
+        .filter(val => val !== "");
+      return values.join(separator);
+    }
+
+    case "uppercase": {
+      if (parents.length !== 1) return "";
+      const val = currentValues[parents[0]];
+      return typeof val === "string" ? val.toUpperCase() : "";
+    }
+
+    case "lowercase": {
+      if (parents.length !== 1) return "";
+      const val = currentValues[parents[0]];
+      return typeof val === "string" ? val.toLowerCase() : "";
+    }
+
+    case "round": {
+      if (parents.length !== 1) return "";
+      const val = Number(currentValues[parents[0]]);
+      return isNaN(val) ? "" : Math.round(val).toString();
     }
 
     default:
