@@ -54,6 +54,7 @@ src/
 git clone https://github.com/joshianushree/Form_Builder
 cd form-builder
 ```
+---
 ###2️⃣ Install Dependencies
 ```
 npm install
