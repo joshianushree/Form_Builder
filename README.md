@@ -54,25 +54,25 @@ src/
 git clone https://github.com/joshianushree/Form_Builder
 cd form-builder
 ```
-2️⃣ Install Dependencies
+###2️⃣ Install Dependencies
 ```
 npm install
 ```
-3️⃣ Run the App
+###3️⃣ Run the App
 ```
 npm start
 ```
 ✅ App will run at: http://localhost:3000
 
-📦 Build for Production
+###📦 Build for Production
 ```
 npm run build
 ```
-🌐 Deployment
+###🌐 Deployment
 Deployed on Netlify:
 Live Demo: https://form-builder-101.netlify.app
 
-🏗️ Architecture Overview
+##🏗️ Architecture Overview
 ```
 +-------------------+
 |   React (MUI)     |
@@ -84,7 +84,7 @@ Live Demo: https://form-builder-101.netlify.app
 | Form Schema Store |
 +-------------------+
 ```
-🔄 Data Flow
+##🔄 Data Flow
 User builds a form in /create page
 
 Schema is saved to localStorage
@@ -95,12 +95,12 @@ Derived fields auto-update based on parent fields
 
 /myforms lists all stored forms with name & creation date
 
-📡 Routes
+##📡 Routes
 /create — Build a new form
 
 /preview — Preview current form as an end user
 
 /myforms — View all saved forms
 
-🙋‍♂️ Contact
+##🙋‍♂️ Contact
 Feel free to open issues or submit pull requests on the GitHub repository.
