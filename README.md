@@ -31,7 +31,7 @@ This project is part of the **upliance.ai Associate Software Developer assignmen
 ---
 
 ## 🗂️ Project Structure
-
+```
 form-builder/
 src/
 ├── components/         # Reusable UI components (Field editors, Navbar, etc.)
@@ -43,6 +43,7 @@ src/
 ├── utils/              # Utility functions
 ├── App.tsx             # App entry point
 └── index.tsx           # React DOM render
+```
 
 ---
 
