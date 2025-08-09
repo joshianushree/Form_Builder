@@ -53,23 +53,27 @@ src/
 ```bash
 git clone https://github.com/joshianushree/Form_Builder
 cd form-builder
-
+```
 2️⃣ Install Dependencies
+```
 npm install
-
+```
 3️⃣ Run the App
+```
 npm start
+```
 ✅ App will run at: http://localhost:3000
 
 📦 Build for Production
+```
 npm run build
-
+```
 🌐 Deployment
 Deployed on Netlify:
 Live Demo: https://form-builder-101.netlify.app
 
 🏗️ Architecture Overview
-
+```
 +-------------------+
 |   React (MUI)     |
 +---------+---------+
@@ -79,6 +83,7 @@ Live Demo: https://form-builder-101.netlify.app
 +---------v---------+
 | Form Schema Store |
 +-------------------+
+```
 🔄 Data Flow
 User builds a form in /create page
 
