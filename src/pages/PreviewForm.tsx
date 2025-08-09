@@ -126,7 +126,7 @@ const PreviewForm: React.FC = () => {
       return;
     }
     alert("Form submitted! Check console for values.");
-    console.log("[PreviewForm] Form submitted with values:", fields);
+    navigate("/myforms");
   };
 
   return (
