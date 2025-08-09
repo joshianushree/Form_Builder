@@ -1,46 +1,100 @@
-# Getting Started with Create React App
+# 📝 Dynamic Form Builder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A **React + TypeScript** application for building, previewing, and managing dynamic forms.  
+This project is part of the **upliance.ai Associate Software Developer assignment** and implements form creation with validations, derived fields, and persistent storage using **localStorage**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📌 Features
 
-### `npm start`
+- ✅ Create dynamic forms with customizable fields
+- ✅ Field types: Text, Number, Textarea, Select, Radio, Checkbox, Date
+- ✅ Configure labels, default values, required toggle, and validation rules
+- ✅ Derived fields that auto-compute values from parent fields
+- ✅ Preview forms as an end-user with live validations
+- ✅ View and manage all saved forms
+- ✅ Store form schemas in **localStorage** (no backend required)
+- ✅ Reorder and delete fields
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🔧 Technologies Used
 
-### `npm test`
+### 💻 Frontend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React.js (with TypeScript)
+- Redux Toolkit
+- Material UI (MUI)
+- CSS
+- localStorage API
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🗂️ Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+form-builder/
+src/
+├── components/         # Reusable UI components (Field editors, Navbar, etc.)
+├── pages/              # Page-level components (/create, /myforms, /preview)
+├── router/             # Route configuration
+├── store/              # Redux slices and store setup
+├── styles/             # Global styles
+├── types/              # TypeScript type definitions
+├── utils/              # Utility functions
+├── App.tsx             # App entry point
+└── index.tsx           # React DOM render
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🚀 Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/joshianushree/Form_Builder
+cd form-builder
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2️⃣ Install Dependencies
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3️⃣ Run the App
+npm start
+✅ App will run at: http://localhost:3000
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+📦 Build for Production
+npm run build
 
-## Learn More
+🌐 Deployment
+Deployed on Netlify:
+Live Demo: https://form-builder-101.netlify.app
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🏗️ Architecture Overview
 
-To learn React, check out the [React documentation](https://reactjs.org/).
++-------------------+
+|   React (MUI)     |
++---------+---------+
+          |
+          | Redux State + localStorage
+          |
++---------v---------+
+| Form Schema Store |
++-------------------+
+🔄 Data Flow
+User builds a form in /create page
+
+Schema is saved to localStorage
+
+/preview renders the form with configured validations
+
+Derived fields auto-update based on parent fields
+
+/myforms lists all stored forms with name & creation date
+
+📡 Routes
+/create — Build a new form
+
+/preview — Preview current form as an end user
+
+/myforms — View all saved forms
+
+🙋‍♂️ Contact
+Feel free to open issues or submit pull requests on the GitHub repository.
